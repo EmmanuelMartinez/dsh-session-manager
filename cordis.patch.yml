@@ -1,0 +1,12 @@
+# Delete Session: one row in the Session row menu plus the Host Remote that moves
+# the Session's durable log into a trash with a retention window. Nothing in-box
+# is replaced; archiving stays available and unaffected.
+#
+# retentionDays is how long a trashed log stays recoverable before the sweep
+# purges it; sweepMinutes is how often that purge runs (0 sweeps only on delete).
+- insert:
+    - id: session-manager
+      name: '@deepseek-ai/dsh-session-manager'
+      config:
+        retentionDays: 30
+        sweepMinutes: 60
