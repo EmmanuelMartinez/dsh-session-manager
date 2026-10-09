@@ -1,22 +1,39 @@
 {
   "name": "@deepseek-ai/dsh-session-manager",
-  "version": "1.0.0",
-  "description": "Delete Session action for the DeepSeek Harness Web/Desktop client: moves a Session's durable log into a trash with a retention window and archives it.",
+  "version": "1.1.0",
+  "description": "Delete Session action and a Trash browser for the DeepSeek Harness Web/Desktop client: moves a Session log into a trash with a retention window and archives it.",
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
-    ".": { "default": "./lib/index.js" },
-    "./client": { "default": "./lib/client.js" },
-    "./typert": { "default": "./lib/typert.host.js" },
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./typert": {
+      "default": "./lib/typert.host.js"
+    },
     "./package.json": "./package.json"
   },
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
-    "client": { "platform": "web" }
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
   },
-  "files": ["lib/index.js", "lib/client.js", "lib/typert.host.js", "cordis.patch.yml"],
-  "dependencies": { "zod": "^4.4.3" },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/typert.host.js",
+    "cordis.patch.yml"
+  ],
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
   "peerDependencies": {
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-session": "*",
