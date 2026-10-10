@@ -1,6 +1,6 @@
 {
   "name": "@deepseek-ai/dsh-session-manager",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Delete Session action and a Trash browser for the DeepSeek Harness Web/Desktop client: moves a Session log into a trash with a retention window and archives it.",
   "license": "MIT",
   "type": "module",
